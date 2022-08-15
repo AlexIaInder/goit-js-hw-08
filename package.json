@@ -2,9 +2,9 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://your_username.github.io/your_repo_name/",
+  "homepage": "https://your_username.github.io/alexiainder/",
   "scripts": {
-    "build": "parcel build src/*.html --public-url /your_repo_name/"
+    "build": "parcel build src/*.html --public-url /alexiainder/"
   },
   "repository": {
     "type": "git",
