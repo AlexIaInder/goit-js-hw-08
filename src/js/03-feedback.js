@@ -20,17 +20,9 @@ form.addEventListener('submit', e => {
   localStorage.removeItem(LOCALSTORAGE_KEY);
 });
 
-const load = key => {
-  try {
-    const serializedState = localStorage.getItem(key);
-    return serializedState === null ? undefined : JSON.parse(serializedState);
-  } catch (error) {
-    console.error('Get state error: ', error.message);
-  }
-};
-
-const storageData = load(LOCALSTORAGE_KEY);
-if (storageData) {
+const storageDataValue = localStorage.getItem(LOCALSTORAGE_KEY);
+if (storageDataValue) {
+  const storageData = JSON.parse(storageDataValue);
   email.value = storageData.email;
   message.value = storageData.message;
 }

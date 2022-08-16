@@ -2,7 +2,6 @@ import { galleryItems } from './gallery-items';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 // Change code below this line
-console.log(galleryItems);
 
 const gallery = document.querySelector('.gallery');
 const items = [];
@@ -20,7 +19,7 @@ galleryItems.forEach(element => {
   galleryImage.src = element.preview;
   galleryImage.setAttribute('data-source', element.original);
   galleryImage.alt = element.description;
-
+  galleryImage.setAttribute('title', element.description);
   galleryItem.append(galleryLink);
   galleryLink.append(galleryImage);
 
